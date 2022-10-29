@@ -6,7 +6,7 @@ function Card({ cardData, onCardClick }) {
   }
 
   return (
-    <article key={cardData._id} className="card" onClick={handleClick}>
+    <article className="card" onClick={handleClick}>
       <img src={cardData.link} alt={cardData.name} className="card__image" />
       <div className="card__info-block">
         <h2 className="card__title">{cardData.name}</h2>
