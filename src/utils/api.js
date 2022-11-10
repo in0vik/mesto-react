@@ -74,6 +74,10 @@ class Api {
   })
     .then(this._handleResponse)
   }
+
+  changeLikeCardStatus(cardId, isLiked) {
+    return isLiked ? this.likeCard(cardId) : this.dislikeCard(cardId);
+  }
   
   updateAvatar(avatar) {
     return fetch(`${this._baseUrl}/users/me/avatar`, {
@@ -96,3 +100,5 @@ const api = new Api({
 });
 
 export default api;
+
+
