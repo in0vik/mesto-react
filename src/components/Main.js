@@ -21,8 +21,7 @@ function Main({ onEditProfile, onAddPlace, onEditAvatar, onCardClick, onCardLike
         <button className="button profile__add-person-button" type="button" onClick={onAddPlace}></button>
       </section>
       <section className="elements">
-        {cards.map((card) => {
-          return (
+        {cards.map((card) => (
             <Card 
               key={card._id} 
               cardData={card} 
@@ -30,7 +29,7 @@ function Main({ onEditProfile, onAddPlace, onEditAvatar, onCardClick, onCardLike
               onLike={onCardLike} 
               onDelete={onCardDelete} />
           )
-        })}
+        )}
       </section>
     </main>
   )
